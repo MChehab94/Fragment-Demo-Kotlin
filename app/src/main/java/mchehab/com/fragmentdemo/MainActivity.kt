@@ -11,6 +11,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        fragmentManager.beginTransaction().add(R.id.frameLayout, helloFragment).commit()
+        if(savedInstanceState == null){
+            fragmentManager.beginTransaction().add(R.id.frameLayout, helloFragment).commit()
+        }
     }
 }
