@@ -6,6 +6,7 @@ import android.os.Bundle
 class MainActivity : AppCompatActivity() {
 
     val helloFragment = HelloFragment()
+    val helloSecondFragment = HelloSecondFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -13,6 +14,7 @@ class MainActivity : AppCompatActivity() {
 
         if(savedInstanceState == null){
             fragmentManager.beginTransaction().add(R.id.frameLayout, helloFragment).commit()
+            fragmentManager.beginTransaction().add(R.id.frameLayoutSecond, helloSecondFragment).commit()
         }
     }
 }
